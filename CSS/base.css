@@ -95,3 +95,4 @@ em, i {
   /*注意：提供的是二倍图，需要使用background-size把图片变成原来的1/2*/
   background-size: 200px 200px;
 }
+/* 移动端1px 像素  问题 */
