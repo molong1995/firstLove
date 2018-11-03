@@ -1,0 +1,14 @@
+### git的基本使用
+- 1 git init  在本地初始化
+- 2 git clone + 地址   将项目克隆到本地
+- 3 git branch + 分支名  创建新的分支
+  - git branch -d + 分支名   删除分支 
+- 4 git checkout + 分支名   切换分支
+  - git checkout -b + 分支名  创建并切换分支
+- 5 git add. 添加所有文件
+- 6 git add CSS/base.css  添加指定的文件
+- 7 git commit -m ''   添加上传的描述
+- 8 git status  查看上传的文件
+- 9 git merge + 分支名   合并分支(要先切换到master分支)
+- 10 git push origin master  上传代码(一般情况下 都会先 git pull 查看是否冲突)
+- 11 冲突解决
