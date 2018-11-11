@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    
+    //  年月日  转成时间戳 
+    // 1. 当前时间转化为时间戳 
+    var date = +new Date()  
+    console.log(date)
+    // 2. 特定时间 转化为时间戳  后三位  会转化成 000
+    var str1 = Number(new Date("2018-11-11 17:10:13"))
+      console.log(str1)
+
+    // 时间戳  转 年月日
+    // 1. 利用正则 获取 年月日 时分秒 月和日   前面没有0
+    var cc = 1141926435646
+    function getTime(time) {
+      var timestamp4 = new Date(time);
+      console.log(timestamp4);
+      console.log(timestamp4.toLocaleDateString().replace(/\//g, "-") + " " + timestamp4.toTimeString().substr(0, 8)); 
+    }
+    getTime(cc)
+    
+    // 2. 利用年月日时分秒拼接  月和日 前面有 0
+    function getdate(time) {
+      var now = new Date(time),
+          y = now.getFullYear(),
+          m = now.getMonth() + 1,
+          d = now.getDate();//-------------------------------------------------------这是时分秒
+      return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " "+ now.toTimeString().substr(0, 8);  
+    }
+    var tt = getdate(cc)
+    console.log(tt)
+    </script>
+</body>
+</html>
